@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
+  - Background
+  - Wall
   - Platform
-  - 
-  - 
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 974757383
+    locked: 0
+  - name: Wall
+    uniqueID: 3111955633
     locked: 0
   - name: Platforms
     uniqueID: 3357669081
