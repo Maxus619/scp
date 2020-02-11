@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour
     private void InputMovement()
     {
         float hDirection = Input.GetAxis("Horizontal");
-
+        
+        // Движение влево
         if ((hDirection < 0) && (coll.IsTouchingLayers(platform)) && (rb.velocity.magnitude < speed))
         {
             rb.AddForce(new Vector2(-speed * acceleration, 0), ForceMode2D.Force);
