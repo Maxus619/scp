@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AutoDoor : MonoBehaviour
 {
-    public string state; // opened, closed, broken (в будущем)
-
+    public string state; // opened, closed, opening, closing, broken (в будущем)
+    // TODO: Переписать это говно
     void Start()
     {
         state = "closed";
@@ -13,7 +13,16 @@ public class AutoDoor : MonoBehaviour
     
     void Update()
     {
-        
+        if (state == "opening")
+        {
+            transform.Translate(Vector2.up * Time.deltaTime * 150);
+            state = "opened";
+        }
+        else if (state == "closing")
+        {
+            transform.Translate(Vector2.down * Time.deltaTime * 150);
+            state = "closed";
+        }
     }
 
     public void PressButton()
@@ -22,18 +31,11 @@ public class AutoDoor : MonoBehaviour
 
         if (state == "closed")
         {
-            while (transform.position.y < -5.75f)
-            {
-                transform.position = Vector2.up;
-            }
-
-            state = "opened";
+            state = "opening";
         }
         else if (state == "opened")
-        // else if (state == "opened" && transform.position.y == -5.75f) // Доп. проверка от бесконечного открытия
         {
-            transform.Translate(Vector2.down * Time.deltaTime * 150);
-            state = "closed";
+            state = "closing";
         }
     }
 }

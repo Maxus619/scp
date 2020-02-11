@@ -3965,6 +3965,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 13, y: 2, z: 0}
+    second:
+      m_TileIndex: 472
+      m_TileSpriteIndex: 472
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 19, y: 2, z: 0}
     second:
       m_TileIndex: 39
@@ -4185,6 +4194,15 @@ Tilemap:
     second:
       m_TileIndex: 14
       m_TileSpriteIndex: 14
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 13, y: 3, z: 0}
+    second:
+      m_TileIndex: 471
+      m_TileSpriteIndex: 471
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -5224,6 +5242,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c01d2d58a7b800a4795ef0db1358d7eb, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 917c6185a9e799940a0c7b570f42781b, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 79976128036a4654b8cefcd0f8932d89, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 4165b3381f3f9654f925277de5e81a54, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: ceb348170e7dbac40aab812cfc045518, type: 3}
@@ -6167,8 +6189,12 @@ Tilemap:
     m_Data: {fileID: 21300938, guid: ceb348170e7dbac40aab812cfc045518, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300940, guid: ceb348170e7dbac40aab812cfc045518, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 31d2bcd9486306741b15941797364d78, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 15673bf51cb175d4fa39d3738df9a6e7, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 471
+  - m_RefCount: 473
     m_Data:
       e00: 1
       e01: 0
@@ -6187,7 +6213,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 471
+  - m_RefCount: 473
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6237,6 +6263,7 @@ TilemapRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
