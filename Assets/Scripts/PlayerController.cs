@@ -13,17 +13,30 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField] private LayerMask platform;
     [SerializeField] private float speed = 5f; // Скорость
+    [SerializeField] private float acceleration = 3f; // Ускорение движения
     [SerializeField] private float jumpForce = 10f; // Сила прыжка
+    [SerializeField] private float drag = 2f;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+
     }
 
     private void Update()
     {
+        
+        if ((state == State.falling) || (state == State.jumping))
+        {
+            rb.drag = 0;
+        }
+        else
+        {
+            rb.drag = drag;
+        }
+        
         InputMovement();
         StateSwitch();
         anim.SetInteger("state", (int)state);
@@ -33,16 +46,15 @@ public class PlayerController : MonoBehaviour
     {
         float hDirection = Input.GetAxis("Horizontal");
 
-        // Движение влево
-        if (hDirection < 0)
+        if ((hDirection < 0) && (coll.IsTouchingLayers(platform)) && (rb.velocity.magnitude < speed))
         {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
+            rb.AddForce(new Vector2(-speed * acceleration, 0), ForceMode2D.Force);
             transform.localScale = new Vector2(-1, 1);
         }
         // Движение вправо
-        else if (hDirection > 0)
+        else if ((hDirection > 0) && (coll.IsTouchingLayers(platform)) && (rb.velocity.magnitude < speed))
         {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
+            rb.AddForce(new Vector2(speed * acceleration, 0), ForceMode2D.Force);
             transform.localScale = new Vector2(1, 1);
         }
 

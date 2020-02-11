@@ -17164,6 +17164,16 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3168703877105113722, guid: b050deb277f229e42ab5ce7d8fafe051,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168703877105113722, guid: b050deb277f229e42ab5ce7d8fafe051,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3168703877105113723, guid: b050deb277f229e42ab5ce7d8fafe051,
         type: 3}
       propertyPath: speed
@@ -17173,6 +17183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: platform.m_Bits
       value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168703877105113723, guid: b050deb277f229e42ab5ce7d8fafe051,
+        type: 3}
+      propertyPath: acceleration
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3168703877105113724, guid: b050deb277f229e42ab5ce7d8fafe051,
         type: 3}
