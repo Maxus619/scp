@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         stamina = maxStamina;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        coll = GetComponent<Collider2D>();
+        coll = GetComponent<CircleCollider2D>();
     }
 
     private void Update()
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         speed = tempSpeed;
 
         // Прыжок
-        if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(platform) && stamina > jumpStaminaDecreasing)
+        if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(platform) && (stamina > jumpStaminaDecreasing))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             state = State.jumping;
