@@ -27,11 +27,11 @@ public class Elevator : MonoBehaviour
             {
                 if (elevDirect == "up")
                 {
-                    player.transform.position += new Vector3(0, 9, 0);
+                    player.transform.position += new Vector3(0, 4.5f, 0);
                 }
                 else if (elevDirect == "down")
                 {
-                    player.transform.position += new Vector3(0, -9, 0);
+                    player.transform.position += new Vector3(0, -4.5f, 0);
                 }
             }
         }
