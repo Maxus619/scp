@@ -15,12 +15,12 @@ public class AutoDoor : MonoBehaviour
     {
         if (state == "opening")
         {
-            transform.Translate(Vector2.up * Time.deltaTime * 150);
+            transform.Translate(Vector2.up * Time.deltaTime * 15);
             state = "opened";
         }
         else if (state == "closing")
         {
-            transform.Translate(Vector2.down * Time.deltaTime * 150);
+            transform.Translate(Vector2.down * Time.deltaTime * 15);
             state = "closed";
         }
     }

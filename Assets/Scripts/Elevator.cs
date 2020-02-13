@@ -20,6 +20,7 @@ public class Elevator : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        CircleCollider2D cc = (CircleCollider2D)other;
         if (other.CompareTag("Player"))
         {
             if (Input.GetButtonDown("Action"))
