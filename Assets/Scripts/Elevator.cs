@@ -20,18 +20,17 @@ public class Elevator : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        CircleCollider2D cc = (CircleCollider2D)other;
         if (other.CompareTag("Player"))
         {
             if (Input.GetButtonDown("Action"))
             {
                 if (elevDirect == "up")
                 {
-                    player.transform.position += new Vector3(0, 4.5f, 0);
+                    player.transform.position += new Vector3(0, 3f, 0);
                 }
                 else if (elevDirect == "down")
                 {
-                    player.transform.position += new Vector3(0, -4.5f, 0);
+                    player.transform.position += new Vector3(0, -3f, 0);
                 }
             }
         }
