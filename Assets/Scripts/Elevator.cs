@@ -5,6 +5,7 @@ using UnityEngine;
 public class Elevator : MonoBehaviour
 {
     public string elevDirect;
+    public GameObject camera;
 
     private GameObject player;
     
@@ -32,6 +33,7 @@ public class Elevator : MonoBehaviour
                 {
                     player.transform.position += new Vector3(0, -3f, 0);
                 }
+                camera.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
             }
         }
     }

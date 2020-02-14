@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elevDirect: down
+  camera: {fileID: 519420028}
 --- !u!61 &120344861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -326,7 +327,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.7449064, y: -0.49495888}
+  m_Offset: {x: -0.48879242, y: -0.49495888}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -337,7 +338,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87070656, y: 1.9899178}
+  m_Size: {x: 0.9937782, y: 1.9899178}
   m_EdgeRadius: 0
 --- !u!1 &173556947
 GameObject:
@@ -447,7 +448,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.49457264, y: -0.49495888}
+  m_Offset: {x: -0.49082708, y: -0.49495888}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -458,7 +459,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9789543, y: 1.9899178}
+  m_Size: {x: 1.033328, y: 1.9899178}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -472,6 +473,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -557,6 +559,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &519420033
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &588518293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,6 +1426,7 @@ GameObject:
   - component: {fileID: 766571924}
   - component: {fileID: 766571923}
   - component: {fileID: 766571927}
+  - component: {fileID: 766571928}
   m_Layer: 9
   m_Name: AutoDoor1
   m_TagString: Untagged
@@ -1485,7 +1509,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.00000023841858}
+  m_Offset: {x: 0, y: 0.49970746}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1496,7 +1520,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.992518}
+  m_Size: {x: 1, y: 1.9931035}
   m_EdgeRadius: 0
 --- !u!4 &766571926
 Transform:
@@ -1533,6 +1557,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!68 &766571928
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766571922}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5053959, y: -0.48911572}
+  - {x: -0.0060157776, y: -1.4938936}
+  - {x: 0.50291824, y: -0.49155998}
 --- !u!1 &788425608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,7 +1684,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5059538, y: -0.49495888}
+  m_Offset: {x: 0.51196766, y: -0.49495888}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1652,7 +1695,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9440212, y: 1.9899178}
+  m_Size: {x: 1.0571384, y: 1.9899178}
   m_EdgeRadius: 0
 --- !u!1 &848582903
 GameObject:
@@ -1801,7 +1844,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.77426004, y: -0.49495888}
+  m_Offset: {x: 0.4996662, y: -0.49495888}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1812,7 +1855,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0365305, y: 1.9899178}
+  m_Size: {x: 1.0258713, y: 1.9899178}
   m_EdgeRadius: 0
 --- !u!1 &1247741787
 GameObject:
@@ -1922,7 +1965,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4950533, y: -0.49495888}
+  m_Offset: {x: 0.5074682, y: -0.49495888}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1933,7 +1976,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9275532, y: 1.9899178}
+  m_Size: {x: 1.0144596, y: 1.9899178}
   m_EdgeRadius: 0
 --- !u!1 &1279422109 stripped
 GameObject:
@@ -1957,6 +2000,25 @@ CircleCollider2D:
   m_Offset: {x: -0.0060907006, y: -0.49927998}
   serializedVersion: 2
   m_Radius: 0.50118506
+--- !u!68 &1279422111
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279422109}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.50637245, y: 0.23074318}
+  - {x: -0.009935498, y: 0.48008844}
+  - {x: 0.491431, y: 0.23074643}
 --- !u!1 &1439630108
 GameObject:
   m_ObjectHideFlags: 0
@@ -18213,6 +18275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elevDirect: up
+  camera: {fileID: 519420028}
 --- !u!61 &1987074694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27750,6 +27813,11 @@ PrefabInstance:
     - target: {fileID: 3168703877105113722, guid: b050deb277f229e42ab5ce7d8fafe051,
         type: 3}
       propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168703877105113722, guid: b050deb277f229e42ab5ce7d8fafe051,
+        type: 3}
+      propertyPath: m_SleepingMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3168703877105113723, guid: b050deb277f229e42ab5ce7d8fafe051,

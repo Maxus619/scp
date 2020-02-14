@@ -6,6 +6,7 @@ public class AutoDoor : MonoBehaviour
 {
     Rigidbody2D rb;
     private float startPosition;
+    private float coefficient;
 
     public string state; // opened, closed, opening, closing, broken (в будущем)
     // TODO: Переписать это говно
@@ -20,27 +21,32 @@ public class AutoDoor : MonoBehaviour
     {
         if (state == "opening")
         {
-            rb.velocity = new Vector2(0, 10);
-            if (rb.position.y >= (startPosition + 2.992518))
+            coefficient = 1 / Mathf.Pow(startPosition + 2.992518f - rb.position.y, 2.4f);
+            if (rb.position.y <= (startPosition + 1.5)) 
+            { 
+                rb.velocity = new Vector2(0, coefficient * 15); 
+            }
+            if (rb.position.y >= (startPosition + 2.992518f))
             {
                 rb.velocity = new Vector2(0, 0);
+                rb.transform.position = new Vector2(rb.position.x, startPosition + 2.992518f);
                 state = "opened";
             }
-            //transform.Translate(Vector2.up * Time.deltaTime * 150);
             
         }
         else if (state == "closing")
         {
-            rb.velocity = new Vector2(0, -10);
-            
+            coefficient = 1 / Mathf.Pow(rb.position.y - startPosition, 2.4f);
+            if (rb.position.y >= startPosition + 1.3)
+            {
+                rb.velocity = new Vector2(0, - coefficient * 15);
+            }
             if (rb.position.y <= startPosition)
             {
                 rb.velocity = new Vector2(0, 0);
+                rb.transform.position = new Vector2(rb.position.x, startPosition);
                 state = "closed";
-            }
-            
-            //transform.Translate(Vector2.down * Time.deltaTime * 150);
-            
+            } 
         }
     }
 
