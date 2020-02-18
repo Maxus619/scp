@@ -25,4 +25,11 @@ public class AutoDoorButton : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("D-class")) // TODO: Add card check
+        {
+            door.PressButton();
+        }
+    }
 }
