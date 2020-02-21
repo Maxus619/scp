@@ -17,33 +17,33 @@ public class DBoyAI : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // MoveToContainment(-1, -16f);
+        MoveToContainment(-1, -16f);
     }
     
     void Update()
     {
         if (task)
         {
-            if (currentLevel > taskLevel)
+            if (currentLevel > taskLevel) // Task on lower level
             {
                 if (transform.position.x > lift0)
                 {
                     rb.velocity = new Vector2(-2, 0);
                 }
-                else
+                else // Walked to elevator
                 {
                     transform.position += new Vector3(0, -9f, 0);
                     currentLevel = -1;
                 }
             }
-            else if (currentLevel == taskLevel)
+            else if (currentLevel == taskLevel) // On task's level
             {
                 if (containmentX < transform.position.x)
                 {
                     rb.velocity = new Vector2(-2, 0);
                 }
             }
-            else // currentLevel < taskLevel
+            else // Task on upper level
             {
 
             }
